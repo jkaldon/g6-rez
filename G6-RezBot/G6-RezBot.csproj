@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{166D380C-8BFB-4C0F-995C-A85C8558129E}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>G6RezBot</RootNamespace>
+    <AssemblyName>G6-RezBot</AssemblyName>
+    <StartupObject>G6RezBot.MainClass</StartupObject>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Externalconsole>true</Externalconsole>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Externalconsole>true</Externalconsole>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="MainClass.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <ProjectReference Include="..\G6-RezBotPluginFramework\G6-RezBotPluginFramework.csproj">
+      <Project>{7ADCEF03-303E-42F1-A650-7F94842727CE}</Project>
+      <Name>G6-RezBotPluginFramework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\G6-Irc\G6-Irc.csproj">
+      <Project>{1F7A4870-1B6A-4E9E-8047-CA05743DCFBD}</Project>
+      <Name>G6-Irc</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\G6-TeamSpeak\G6-TeamSpeak.csproj">
+      <Project>{3832DCF4-EC21-4DE3-941E-77FBDE5EA037}</Project>
+      <Name>G6-TeamSpeak</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>
